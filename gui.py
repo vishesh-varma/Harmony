@@ -54,12 +54,12 @@ dowbutt=tk.Button(Root, text="Download!", command=dlmusic)
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Packing stuff onto the GUI
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-imglabel.pack()
-Dirbutt.pack()
-Dirfield.pack()
-tell.pack()
-musfield.pack()
-dowbutt.pack()
+imglabel.pack(pady=10)
+Dirbutt.pack(pady=10)
+Dirfield.pack(pady=10)
+tell.pack(pady=10)
+musfield.pack(pady=10)
+dowbutt.pack(pady=10)
 
 
 
