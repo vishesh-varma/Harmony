@@ -5,6 +5,10 @@ import tkinter.filedialog
 import json
 
 #Local Imports
+import back
+
+#Initializing the Spotify Clients
+back.initialize()
 
 #Defining the widget commands
 
@@ -18,7 +22,10 @@ def dirselection():
         json.dump(Data, f)
 
 def dlmusic():
-    pass
+    link=musfield.get()
+    link=link.strip()
+
+    back.download(link)
 
 #Defining The Window
 
