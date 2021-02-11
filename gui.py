@@ -52,7 +52,7 @@ Dirfield.insert(0,f"{Data['Directory']}")
 Dirbutt=tk.Button(Root,text="Select Directory", command=dirselection, bg='#24292e', fg="white")
 
 #Text widget to tell the user to Enter the spotify link below
-tell=tk.Label(Root,text="Enter the link in the text field below:", bg='#24292e', fg="white")
+tell=tk.Label(Root,text="Enter the link or search in the text field below:", bg='#24292e', fg="white")
 
 #Input widget to get the link
 musfield=tk.Entry(Root)
