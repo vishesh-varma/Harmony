@@ -25,7 +25,14 @@ def dlmusic():
     link=musfield.get()
     link=link.strip()
 
-    back.download(link)
+    downloadcheck=back.download(link)
+    #FinalMessage.destroy()
+    if downloadcheck == 1:
+        FinalMessage.configure(text="Download Complete")
+        #FinalMessage.pack()
+    else:
+        FinalMessage.configure(text="Wrong Link Provided")
+        #FinalMessage.pack()
 
 #Defining The Window
 
@@ -52,13 +59,16 @@ Dirfield.insert(0,f"{Data['Directory']}")
 Dirbutt=tk.Button(Root,text="Select Directory", command=dirselection, bg='#24292e', fg="white")
 
 #Text widget to tell the user to Enter the spotify link below
-tell=tk.Label(Root,text="Enter the link in the text field below:", bg='#24292e', fg="white")
+tell=tk.Label(Root,text="Enter the link or search in the text field below:", bg='#24292e', fg="white")
 
 #Input widget to get the link
 musfield=tk.Entry(Root, bg="#1C222A", fg='white')
 
 #Button to download the song
 dowbutt=tk.Button(Root, text="Download!", command=dlmusic, bg='#24292e', fg="white")
+
+#Final Download Confirmation Message
+FinalMessage=tk.Label(Root, text=" ", bg='#24292e', fg="white")
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Packing stuff onto the GUI
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -68,6 +78,7 @@ Dirbutt.pack(pady=10)
 tell.pack(pady=10, padx=10)
 musfield.pack(pady=5)
 dowbutt.pack(pady=5)
+FinalMessage.pack(pady=5)
 
 
 
