@@ -45,7 +45,7 @@ fimage=ImageTk.PhotoImage(Image.open('./assets/fimage.png'))
 imglabel=tk.Label(Root,image=fimage, bg='#24292e')
 
 #Directory Input
-Dirfield=tk.Entry(Root)
+Dirfield=tk.Entry(Root, bg="#1C222A", fg='white')
 Dirfield.insert(0,f"{Data['Directory']}")
 
 #Directory Button
@@ -55,7 +55,7 @@ Dirbutt=tk.Button(Root,text="Select Directory", command=dirselection, bg='#24292
 tell=tk.Label(Root,text="Enter the link or search in the text field below:", bg='#24292e', fg="white")
 
 #Input widget to get the link
-musfield=tk.Entry(Root)
+musfield=tk.Entry(Root, bg="#1C222A", fg='white')
 
 #Button to download the song
 dowbutt=tk.Button(Root, text="Download!", command=dlmusic, bg='#24292e', fg="white")
