@@ -25,7 +25,14 @@ def dlmusic():
     link=musfield.get()
     link=link.strip()
 
-    back.download(link)
+    downloadcheck=back.download(link)
+    #FinalMessage.destroy()
+    if downloadcheck == 1:
+        FinalMessage.configure(text="Download Complete")
+        #FinalMessage.pack()
+    else:
+        FinalMessage.configure(text="Wrong Link Provided")
+        #FinalMessage.pack()
 
 #Defining The Window
 
@@ -59,6 +66,9 @@ musfield=tk.Entry(Root, bg="#1C222A", fg='white')
 
 #Button to download the song
 dowbutt=tk.Button(Root, text="Download!", command=dlmusic, bg='#24292e', fg="white")
+
+#Final Download Confirmation Message
+FinalMessage=tk.Label(Root, text=" ", bg='#24292e', fg="white")
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Packing stuff onto the GUI
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -68,6 +78,7 @@ Dirbutt.pack(pady=10)
 tell.pack(pady=10, padx=10)
 musfield.pack(pady=5)
 dowbutt.pack(pady=5)
+FinalMessage.pack(pady=5)
 
 
 

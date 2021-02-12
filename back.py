@@ -25,6 +25,7 @@ def download(link : str):
     localdata=readdata()
     currdir=os.getcwd()
     os.chdir(localdata["Directory"])
+    falselink=0
 
     if defaultTrack in link:
         MySong=SongObj.from_url(link)
@@ -41,9 +42,18 @@ def download(link : str):
         download=DownloadManager()
         download.download_multiple_songs(SongList)
         
-    else:
+    elif " " in link:
         MySong=ut.search_for_song(link)
         download=DownloadManager()
         download.download_single_song(MySong)
-
+    else:
+        falselink=1
+    
     os.chdir(currdir)
+
+    if falselink == 0:
+        return True
+    else:
+        return False
+
+    
