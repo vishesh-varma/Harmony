@@ -6,6 +6,9 @@ import spotdl.search.utils as ut
 from spotdl.search.songObj import SongObj
 import os
 import json
+import spotdl.download.progressHandlers as pH
+import progClass
+pH.DisplayManager=progClass.progCl
 
 defaultTrack="https://open.spotify.com/track/"
 defaultAlbum="https://open.spotify.com/album/"
