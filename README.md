@@ -9,4 +9,5 @@
 You **need** to have these downloaded to run the script:
 - Pillow(pip install pillow)
 - Spotdl(pip install spotdl)
+- ffmpeg
 The rest should be installed by default
