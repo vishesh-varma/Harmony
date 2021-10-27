@@ -1,3 +1,4 @@
+This project is no longer maintained, and no longer works because of changes in spot-dl, one of its most important dependencies.
 # Harmony
  A Python script that allows users to download all of the songs all of the major streaming platforms to be downloaded on your PC. Currently the GitHub version only has the GUI, but soon there will be addition of the backend as well.
  
